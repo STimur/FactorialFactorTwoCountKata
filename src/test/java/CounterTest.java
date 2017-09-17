@@ -18,7 +18,12 @@ public class CounterTest {
         assertEquals(3, count(4));
     }
 
+    @Test
+    public void countEight() throws Exception {
+        assertEquals(7, count(8));
+    }
+
     private int count(int n) {
-        return n/4 + n/2;
+        return n/8 + n/4 + n/2;
     }
 }
