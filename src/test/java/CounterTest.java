@@ -3,24 +3,28 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class CounterTest {
+    private void assertsNumberOfFactorTwoInFactorialOf(int n, int nOfFactorTwo) {
+        assertEquals(nOfFactorTwo, countFactorTwoInFactorialOf(n));
+    }
+
     @Test
     public void countOne() throws Exception {
-        assertEquals(0, countFactorTwoInFactorialOf(1));
+        assertsNumberOfFactorTwoInFactorialOf(1, 0);
     }
 
     @Test
     public void countTwo() throws Exception {
-        assertEquals(1, countFactorTwoInFactorialOf(2));
+        assertsNumberOfFactorTwoInFactorialOf(2, 1);
     }
 
     @Test
     public void countFour() throws Exception {
-        assertEquals(3, countFactorTwoInFactorialOf(4));
+        assertsNumberOfFactorTwoInFactorialOf(4, 3);
     }
 
     @Test
     public void countEight() throws Exception {
-        assertEquals(7, countFactorTwoInFactorialOf(8));
+        assertsNumberOfFactorTwoInFactorialOf(8, 7);
     }
 
     private int countFactorTwoInFactorialOf(int n) {
