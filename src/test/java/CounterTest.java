@@ -33,6 +33,8 @@ public class CounterTest {
     }
 
     private int countFactorTwoInFactorialOf(int n) {
-        return n/16 + n/8 + n/4 + n/2;
+        if (n == 1)
+            return 0;
+        return n / 2 + countFactorTwoInFactorialOf(n / 2);
     }
 }
