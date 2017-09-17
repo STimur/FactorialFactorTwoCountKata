@@ -60,8 +60,8 @@ public class CounterTest {
 
     @Test
     public void acceptance() throws Exception {
-        int n = 100;
-        assertEquals(bruteForceCountFactorTwoInFactorialOf(n), countFactorTwoInFactorialOf(n));
+        for (int i = 1; i < 100; i++)
+            assertEquals(bruteForceCountFactorTwoInFactorialOf(i), countFactorTwoInFactorialOf(i));
     }
 
     private int countFactorTwoInFactorialOf(int n) {
