@@ -8,7 +8,14 @@ public class CounterTest {
         assertEquals(0, count(1));
     }
 
+    @Test
+    public void countTwo() throws Exception {
+        assertEquals(1, count(2));
+    }
+
     private int count(int n) {
-        return 0;
+        if (n == 1)
+            return 0;
+        return 1;
     }
 }
