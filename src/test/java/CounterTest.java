@@ -12,12 +12,19 @@ public class CounterTest {
     private int bruteForceCountFactorTwoInFactorialOf(int n) {
         BigInteger fact = fact(new BigInteger(Integer.toString(n)));
         int i = 0;
-        while (fact.remainder(new BigInteger("2")).compareTo(new BigInteger("0")) == 0
-                && fact.divide(new BigInteger("2")).compareTo(new BigInteger("0")) == 1) {
+        while (isMultipleOfTwo(fact) && greaterThanTwo(fact)) {
             fact = fact.divide(new BigInteger("2"));
             i++;
         }
         return i;
+    }
+
+    private boolean greaterThanTwo(BigInteger n) {
+        return n.compareTo(new BigInteger("2")) >= 0;
+    }
+
+    private boolean isMultipleOfTwo(BigInteger n) {
+        return n.remainder(new BigInteger("2")).compareTo(new BigInteger("0")) == 0;
     }
 
     private BigInteger fact(BigInteger n) {
