@@ -13,9 +13,12 @@ public class CounterTest {
         assertEquals(1, count(2));
     }
 
+    @Test
+    public void countFour() throws Exception {
+        assertEquals(3, count(4));
+    }
+
     private int count(int n) {
-        if (n == 1)
-            return 0;
-        return 1;
+        return n/4 + n/2;
     }
 }
