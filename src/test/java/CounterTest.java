@@ -27,7 +27,12 @@ public class CounterTest {
         assertsNumberOfFactorTwoInFactorialOf(8, 7);
     }
 
+    @Test
+    public void sixteen() throws Exception {
+        assertsNumberOfFactorTwoInFactorialOf(16, 15);
+    }
+
     private int countFactorTwoInFactorialOf(int n) {
-        return n/8 + n/4 + n/2;
+        return n/16 + n/8 + n/4 + n/2;
     }
 }
